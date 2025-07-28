@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental IQ - Hidrogel para la Concentración</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Playfair Display', serif;
+    }
+
+    body {
+      background-color: #f4f9f4;
+      color: #2e4e3f;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #e4f0dc, #d5eacb);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      height: 50px;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+    }
+
+    header:hover {
+      height: 160px;
+    }
+
+    .logo {
+      text-align: center;
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+
+    header:hover .logo {
+      display: block;
+      opacity: 1;
+    }
+
+    .logo img {
+      height: 100px;
+      margin: 10px auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2e4e3f;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav ul li a:hover {
+      color: #6d8a66;
+    }
+
+    .hero {
+      background: #a8bda4;
+      color: white;
+      padding: 200px 20px 100px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .hero span {
+      font-size: 3rem;
+      font-weight: bold;
+      display: block;
+    }
+
+    .product-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .product-box {
+      background-color: #e8f5e9;
+      border-left: 6px solid #a8bda4;
+      border-radius: 12px;
+      padding: 30px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(168, 189, 164, 0.2);
+    }
+
+    .product-box img {
+      width: 200px;
+      margin-bottom: 15px;
+    }
+
+    .buy-button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #6d8a66;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: #597154;
+    }
+
+    .comments-section {
+      padding: 50px 20px;
+      background-color: #eef7ec;
+    }
+
+    .comments-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .comment-box {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      text-align: left;
+    }
+
+    .comment-box input,
+    .comment-box textarea,
+    .comment-box select {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    .comment-box button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #6d8a66;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .comment-list {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+    }
+
+    .comment-item {
+      min-width: 200px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      background: #fefefe;
+    }
+
+    .stars {
+      color: #f1c40f;
+    }
+
+    footer {
+      background-color: #2e4e3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div class="logo">
+      <img src="C:\Users\Usuario\Downloads\Merca\logoFinal.png" alt="Logo Mental IQ">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#comentarios">Comentarios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <span>Hidrogel para la Concentración</span>
+    <p>MentalIQ</p>
+  </section>
+
+  <section class="product-section" id="tienda">
+    <div class="product-box">
+      <h2>Hidrogel Original</h2>
+      <img src="logoFinal.png" alt="Hidrogel Original">
+      <p>Prueba</p>
+      <a class="buy-button" href="https://wa.me/50488007471?text=Hola%2C%20quiero%20comprar%20el%20hidrogel%20Mental%20IQ" target="_blank">Comprar por WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="product-section" id="nosotros">
+    <h2>Sobre Nosotros</h2><br>
+    <h3>Mision</h3>
+    <p>Ofrecemos soluciones efectivas, seguras y naturales que promuevan el bienestar integral de las personas, potenciando su enfoque mental, rendimiento y calidad de vida en sus momentos de mayor exigencia.</p><br>
+    <h3>Vision</h3>
+    <p>Ser la marca líder en soluciones naturales que promuevan el bienestar integral, revolucionando la forma en que las personas cuidan su mente y cuerpo, con productos accesibles y respaldados por ciencia y naturaleza.</p><br>
+    <h3>Valores Organizacionales </h3>
+    <p>Bienestar Integral: Comprometidos con el equilibrio mental y físico de nuestros consumidores. </p>
+    <p>Naturalidad: Uso de ingredientes seguros, saludables y de origen natural. </p>
+    <p>Innovación: Desarrollo continuo de soluciones prácticas y científicamente respaldadas. </p>
+    <p>Confianza y Transparencia: Comunicación clara sobre ingredientes, efectos y beneficios reales.</p>
+  </section>
+
+  <section class="comments-section" id="comentarios">
+    <h2>Comentarios</h2>
+    <div class="comment-box">
+      <input id="nombre" placeholder="Tu nombre (sin palabras ofensivas)" />
+      <textarea id="comentario" placeholder="Escribe tu comentario..."></textarea>
+      <select id="estrellas">
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+      </select>
+      <button onclick="guardarComentario()">Enviar</button>
+    </div>
+    <div class="comment-list" id="listaComentarios"></div>
+  </section>
+
+  <section class="product-section" id="contacto">
+    <h2>Contacto</h2>
+    <p></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mental IQ</p>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </footer>
+
+  <script>
+    const palabrasProhibidas = ['idiota', 'tonto', 'estúpido', 'imbécil','mierda','culero','pendejo'];
+
+    function contienePalabrasProhibidas(texto) {
+      return palabrasProhibidas.some(palabra => texto.toLowerCase().includes(palabra));
+    }
+
+    function guardarComentario() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const comentario = document.getElementById("comentario").value.trim();
+      const estrellas = document.getElementById("estrellas").value;
+
+      if (!nombre || !comentario) return;
+      if (contienePalabrasProhibidas(nombre) || contienePalabrasProhibidas(comentario)) {
+        alert("Por favor, evita lenguaje ofensivo.");
+        return;
+      }
+
+      const nuevoComentario = {
+        nombre,
+        texto: comentario,
+        estrellas: parseInt(estrellas),
+        fecha: new Date().toISOString()
+      };
+
+      const comentarios = JSON.parse(localStorage.getItem("comentarios") || "[]");
+      comentarios.unshift(nuevoComentario);
+      localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+      document.getElementById("nombre").value = "";
+      document.getElementById("comentario").value = "";
+      document.getElementById("estrellas").value = "5";
+
+      mostrarComentarios();
+    }
+
+    function mostrarComentarios() {
+      const comentarios = JSON.parse(localStorage.getItem("comentarios") || "[]");
+      const lista = document.getElementById("listaComentarios");
+      lista.innerHTML = comentarios.map(c => `
+        <div class='comment-item'>
+          <strong>${c.nombre}</strong><br>
+          <span class='stars'>${'⭐'.repeat(c.estrellas)}</span><br>
+          ${c.texto}
+        </div>
+      `).join("");
+    }
+
+    mostrarComentarios();
+  </script>
+</body>
+
+</html>
