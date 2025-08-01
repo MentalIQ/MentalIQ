@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: 'Playfair Display', serif;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; font-family: 'Playfair Display', serif; }
     body {
       background-color: #f4f9f4;
       color: #2e4e3f;
       line-height: 1.6;
+      padding-top: 160px; /* deja espacio para el header fijo */
     }
 
     header {
@@ -28,37 +21,13 @@
       position: fixed;
       top: 0;
       z-index: 1000;
-      height: auto;
       padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    @media (min-width: 768px) {
-      header {
-        height: 50px;
-        overflow: hidden;
-        transition: height 0.3s ease-in-out;
-      }
-
-      header:hover {
-        height: 160px;
-      }
-
-      .logo {
-        display: none;
-      }
-
-      header:hover .logo {
-        display: block;
-      }
-    }
-
-    .logo {
-      text-align: center;
-      opacity: 1;
-    }
-
+    .logo { text-align: center; }
     .logo img {
-      height: 100px;
+      height: 80px;
       margin: 10px auto;
     }
 
@@ -77,21 +46,17 @@
       font-weight: bold;
       font-size: 1.1rem;
     }
-
-    nav ul li a:hover {
-      color: #6d8a66;
-    }
+    nav ul li a:hover { color: #6d8a66; }
 
     .hero {
       background: #a8bda4;
       color: white;
-      padding: 200px 20px 100px;
+      padding: 100px 20px 80px;
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
-
     .hero span {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: bold;
       display: block;
     }
@@ -100,22 +65,19 @@
       padding: 50px 20px;
       text-align: center;
     }
-
     .product-box {
-      background-color: #e8f5e9;
+      background-color: #e8f0dc;
       border-left: 6px solid #a8bda4;
       border-radius: 12px;
       padding: 30px 20px;
       max-width: 600px;
       margin: 0 auto;
-      box-shadow: 0 0 10px rgba(168, 189, 164, 0.2);
+      box-shadow: 0 0 10px rgba(168,189,164,0.2);
     }
-
     .product-box img {
       width: 200px;
       margin-bottom: 15px;
     }
-
     .buy-button {
       margin-top: 20px;
       padding: 12px 25px;
@@ -129,32 +91,20 @@
       display: inline-block;
       transition: background-color 0.3s;
     }
-
-    .buy-button:hover {
-      background-color: #597154;
-    }
+    .buy-button:hover { background-color: #597154; }
 
     .comments-section {
       padding: 50px 20px;
       background-color: #eef7ec;
     }
-
-    .comments-section h2 {
-      margin-bottom: 10px;
-    }
-
-    .comments-section p {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
+    .comments-section h2 { margin-bottom: 10px; }
+    .comments-section p { font-size: 0.9rem; color: #555; margin-bottom: 20px; }
 
     .comment-box {
       max-width: 600px;
       margin: 0 auto 30px;
       text-align: left;
     }
-
     .comment-box input,
     .comment-box textarea,
     .comment-box select {
@@ -162,7 +112,6 @@
       margin-bottom: 10px;
       padding: 10px;
     }
-
     .comment-box button {
       margin-top: 10px;
       padding: 10px 20px;
@@ -182,7 +131,6 @@
       overflow-x: auto;
       gap: 10px;
     }
-
     .comment-item {
       min-width: 200px;
       border: 1px solid #ccc;
@@ -190,9 +138,11 @@
       border-radius: 8px;
       background: #fefefe;
     }
+    .stars { color: #f1c40f; }
 
-    .stars {
-      color: #f1c40f;
+    section#contacto {
+      padding: 50px 20px;
+      text-align: center;
     }
 
     footer {
@@ -201,11 +151,17 @@
       padding: 20px;
       text-align: center;
     }
-
     footer a {
       color: white;
       margin: 0 10px;
       font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .logo img { height: 60px; }
+      nav ul { gap: 20px; }
+      .hero { font-size: 1.2rem; padding: 80px 20px 60px; }
+      .hero span { font-size: 2rem; }
     }
   </style>
 </head>
@@ -247,9 +203,9 @@
     <h3>Visión</h3>
     <p>Ser la marca líder en soluciones naturales que promuevan el bienestar integral, revolucionando la forma en que las personas cuidan su mente y cuerpo, con productos accesibles y respaldados por ciencia y naturaleza.</p><br>
     <h3>Valores Organizacionales</h3>
-    <p>Bienestar Integral: Comprometidos con el equilibrio mental y físico de nuestros consumidores. </p>
-    <p>Naturalidad: Uso de ingredientes seguros, saludables y de origen natural. </p>
-    <p>Innovación: Desarrollo continuo de soluciones prácticas y científicamente respaldadas. </p>
+    <p>Bienestar Integral: Comprometidos con el equilibrio mental y físico de nuestros consumidores.</p>
+    <p>Naturalidad: Uso de ingredientes seguros, saludables y de origen natural.</p>
+    <p>Innovación: Desarrollo continuo de soluciones prácticas y científicamente respaldadas.</p>
     <p>Confianza y Transparencia: Comunicación clara sobre ingredientes, efectos y beneficios reales.</p>
   </section>
 
@@ -283,7 +239,7 @@
   </footer>
 
   <script>
-    const palabrasProhibidas = ['idiota', 'tonto', 'estúpido', 'imbécil', 'mierda', 'culero', 'pendejo'];
+    const palabrasProhibidas = ['idiota', 'tonto', 'estúpido', 'imbécil','mierda','culero','pendejo'];
 
     function contienePalabrasProhibidas(texto) {
       return palabrasProhibidas.some(palabra => texto.toLowerCase().includes(palabra));
@@ -293,28 +249,23 @@
       const nombre = document.getElementById("nombre").value.trim();
       const comentario = document.getElementById("comentario").value.trim();
       const estrellas = document.getElementById("estrellas").value;
-
       if (!nombre || !comentario) return;
       if (contienePalabrasProhibidas(nombre) || contienePalabrasProhibidas(comentario)) {
         alert("Por favor, evita lenguaje ofensivo.");
         return;
       }
-
       const nuevoComentario = {
         nombre,
         texto: comentario,
         estrellas: parseInt(estrellas),
         fecha: new Date().toISOString()
       };
-
       const comentarios = JSON.parse(localStorage.getItem("comentarios") || "[]");
       comentarios.unshift(nuevoComentario);
       localStorage.setItem("comentarios", JSON.stringify(comentarios));
-
       document.getElementById("nombre").value = "";
       document.getElementById("comentario").value = "";
       document.getElementById("estrellas").value = "5";
-
       mostrarComentarios();
     }
 
@@ -333,5 +284,4 @@
     mostrarComentarios();
   </script>
 </body>
-
 </html>
